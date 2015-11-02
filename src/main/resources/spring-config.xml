@@ -26,4 +26,16 @@
     <bean id="kenny" class="foo.bar.Instrumentalist" p:instrument-ref="saxophone" p:song="Jingle Bells"></bean>
     <bean id="king" scope="singleton" class="foo.bar.King" factory-method="getInstance"></bean>
 
+    <bean id="hank" class="foo.bar.OneManBand" >
+        <property name="instruments">
+            <list>
+                <ref bean="saxophone"/>
+            </list>
+        </property>
+    </bean>
+    <bean id="carl"
+          class="foo.bar.Instrumentalist">
+        <property name="song" value="#{kenny.song}" />
+    </bean>
+
 </beans>

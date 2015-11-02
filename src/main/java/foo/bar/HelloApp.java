@@ -14,5 +14,7 @@ public class HelloApp {
         king.say();
         Performer performer1 = (Performer) context.getBean("kenny");
         performer1.perform();
+        Performer performer2 = (Performer) context.getBean("hank");
+        performer2.perform();
     }
 }
